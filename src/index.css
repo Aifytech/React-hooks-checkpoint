@@ -8,53 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 15% 8%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
 
-    --card: 220 15% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 15% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 263 70% 50%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 356 93% 49%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 16%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 16%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 67%;
 
-    --accent: 263 70% 50%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 356 93% 49%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 16%;
-    --ring: 263 70% 50%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 356 93% 49%;
 
     --radius: 0.75rem;
 
-    /* Movie app specific colors */
-    --movie-primary: 263 70% 50%;
-    --movie-secondary: 280 100% 70%;
-    --movie-accent: 45 100% 60%;
-    --movie-surface: 220 15% 12%;
-    --movie-surface-hover: 220 15% 16%;
+    /* Netflix-inspired movie app colors */
+    --movie-primary: 356 93% 49%;        /* Netflix Red #e50914 */
+    --movie-secondary: 0 100% 60%;       /* Bright Red #ff3333 */
+    --movie-accent: 356 93% 49%;         /* Netflix Red accent */
+    --movie-surface: 0 0% 12%;           /* Card/Panel #1e1e1e */
+    --movie-surface-hover: 0 0% 18%;     /* Lighter hover state */
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50%), hsl(280 100% 70%));
-    --gradient-card: linear-gradient(145deg, hsl(220 15% 12%), hsl(220 15% 16%));
+    /* Enhanced gradients with Netflix red */
+    --gradient-primary: linear-gradient(135deg, hsl(356 93% 49%), hsl(0 100% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12%), hsl(0 0% 15%));
+    --gradient-hero: linear-gradient(180deg, transparent, hsl(0 0% 7%));
     
-    /* Shadows */
-    --shadow-card: 0 8px 32px hsl(220 15% 4% / 0.3);
-    --shadow-card-hover: 0 16px 64px hsl(263 70% 50% / 0.2);
+    /* Enhanced shadows with red glow */
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+    --shadow-card-hover: 0 16px 64px hsl(356 93% 49% / 0.25);
+    --shadow-glow: 0 0 40px hsl(356 93% 49% / 0.3);
     
-    /* Transitions */
+    /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
