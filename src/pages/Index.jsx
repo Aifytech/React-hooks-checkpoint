@@ -21,7 +21,7 @@ const initialMovies = [
   {
     title: "The Dark Knight",
     description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests.",
-    posterURL: "https://images.unsplash.com/photo-1500375592092-40eb21900cd21?w=300&h=450&fit=crop",
+    posterURL: "",
     rating: 9.0
   },
   {
