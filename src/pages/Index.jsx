@@ -9,31 +9,31 @@ const initialMovies = [
   {
     title: "The Shawshank Redemption",
     description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-    posterURL: "https://images.unsplash.com/photo-1489599735023-bf207808badd?w=300&h=450&fit=crop",
+    posterURL: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=450&fit=crop",
     rating: 9.3
   },
   {
     title: "The Godfather",
     description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-    posterURL: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=300&h=450&fit=crop",
+    posterURL: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=300&h=450&fit=crop",
     rating: 9.2
   },
   {
     title: "The Dark Knight",
     description: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests.",
-    posterURL: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=300&h=450&fit=crop",
+    posterURL: "https://images.unsplash.com/photo-1500375592092-40eb21900cd21?w=300&h=450&fit=crop",
     rating: 9.0
   },
   {
     title: "Pulp Fiction",
     description: "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
-    posterURL: "https://images.unsplash.com/photo-1594736797933-d0f26d9b777e?w=300&h=450&fit=crop",
+    posterURL: "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?w=300&h=450&fit=crop",
     rating: 8.9
   },
   {
     title: "Inception",
     description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea.",
-    posterURL: "https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?w=300&h=450&fit=crop",
+    posterURL: "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=300&h=450&fit=crop",
     rating: 8.8
   }
 ];

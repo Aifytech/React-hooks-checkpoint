@@ -5,13 +5,13 @@ const MovieCard = ({ movie }) => {
 
   return (
     <div className="group relative bg-movie-surface rounded-lg overflow-hidden transition-all duration-300 hover:bg-movie-surface-hover hover:scale-105 hover:shadow-[var(--shadow-card-hover)] shadow-[var(--shadow-card)]">
-      <div className="aspect-[2/3] overflow-hidden">
+      <div className="relative overflow-hidden">
         <img
           src={posterURL}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+          className="w-full h-[300px] object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
           onError={(e) => {
-            e.currentTarget.src = 'https://via.placeholder.com/300x450/374151/9CA3AF?text=No+Image';
+            e.currentTarget.src = 'https://via.placeholder.com/200x300/1e1e1e/e50914?text=No+Image';
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
