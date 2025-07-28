@@ -22,7 +22,7 @@ const MovieFilter = ({ filters, onFilterChange }) => {
             placeholder="Enter movie title..."
             value={title}
             onChange={(e) => onFilterChange({ ...filters, title: e.target.value })}
-            className="bg-movie-surface-hover border-border focus:border-movie-primary focus:ring-movie-primary/20"
+            className=" border-border focus:border-movie-primary focus:ring-movie-primary/20"
           />
         </div>
         
@@ -39,7 +39,7 @@ const MovieFilter = ({ filters, onFilterChange }) => {
             placeholder="0.0"
             value={minRating}
             onChange={(e) => onFilterChange({ ...filters, minRating: e.target.value })}
-            className="bg-movie-surface-hover border-border focus:border-movie-primary focus:ring-movie-primary/20"
+            className="border-border focus:border-movie-primary focus:ring-movie-primary/20"
           />
         </div>
       </div>

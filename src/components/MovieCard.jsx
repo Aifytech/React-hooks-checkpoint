@@ -1,22 +1,29 @@
-import { Star } from 'lucide-react';
+import { Star } from "lucide-react";
 
 const MovieCard = ({ movie }) => {
   const { title, description, posterURL, rating } = movie;
 
+  // Use a fallback image if posterURL is empty or falsy
+  const posterSrc =
+    posterURL && posterURL.trim() !== ""
+      ? posterURL
+      : "https://via.placeholder.com/200x300/1e1e1e/e50914?text=No+Image";
+
   return (
-    <div className="group relative bg-movie-surface rounded-lg overflow-hidden transition-all duration-300 hover:bg-movie-surface-hover hover:scale-105 hover:shadow-[var(--shadow-card-hover)] shadow-[var(--shadow-card)]">
+    <div className=" group relative bg-movie-surface rounded-lg overflow-hidden transition-all duration-300 hover:bg-movie-surface-hover hover:scale-105 hover:shadow-[var(--shadow-card-hover)] shadow-[var(--shadow-card)]">
       <div className="relative overflow-hidden">
         <img
-          src={posterURL}
+          src={posterSrc}
           alt={title}
-          className="w-full h-[300px] object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110"
+          className="w-[500px] h-[300px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
           onError={(e) => {
-            e.currentTarget.src = 'https://via.placeholder.com/200x300/1e1e1e/e50914?text=No+Image';
+            e.currentTarget.src =
+              "https://via.placeholder.com/200x300/1e1e1e/e50914?text=No+Image";
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
-      
+
       <div className="p-4">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-lg font-semibold text-foreground truncate flex-1">
@@ -29,7 +36,7 @@ const MovieCard = ({ movie }) => {
             </span>
           </div>
         </div>
-        
+
         <p className="text-sm text-muted-foreground line-clamp-3">
           {description}
         </p>

@@ -1,49 +1,51 @@
-import { useState } from 'react';
-import { Plus, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { useState } from "react";
+import { Plus, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 const AddMovie = ({ onAddMovie }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    posterURL: '',
-    rating: ''
+    title: "",
+    description: "",
+    posterURL: "",
+    rating: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!formData.title || !formData.description || !formData.rating) {
-      alert('Please fill in all required fields');
+      alert("Please fill in all required fields");
       return;
     }
 
     const rating = parseFloat(formData.rating);
     if (isNaN(rating) || rating < 0 || rating > 10) {
-      alert('Please enter a valid rating between 0 and 10');
+      alert("Please enter a valid rating between 0 and 10");
       return;
     }
 
     onAddMovie({
       ...formData,
       rating: rating,
-      posterURL: formData.posterURL || 'https://via.placeholder.com/300x450/374151/9CA3AF?text=No+Image'
+      posterURL:
+        formData.posterURL ||
+        "https://via.placeholder.com/300x450/374151/9CA3AF?text=No+Image",
     });
 
     setFormData({
-      title: '',
-      description: '',
-      posterURL: '',
-      rating: ''
+      title: "",
+      description: "",
+      posterURL: "",
+      rating: "",
     });
     setIsOpen(false);
   };
 
   const handleInputChange = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   if (!isOpen) {
@@ -83,8 +85,8 @@ const AddMovie = ({ onAddMovie }) => {
               type="text"
               placeholder="Enter movie title"
               value={formData.title}
-              onChange={(e) => handleInputChange('title', e.target.value)}
-              className="bg-movie-surface-hover border-border focus:border-movie-primary focus:ring-movie-primary/20"
+              onChange={(e) => handleInputChange("title", e.target.value)}
+              className=" border-border focus:border-movie-primary focus:ring-movie-primary/20 text-black"
               required
             />
           </div>
@@ -100,8 +102,8 @@ const AddMovie = ({ onAddMovie }) => {
               step="0.1"
               placeholder="8.5"
               value={formData.rating}
-              onChange={(e) => handleInputChange('rating', e.target.value)}
-              className="bg-movie-surface-hover border-border focus:border-movie-primary focus:ring-movie-primary/20"
+              onChange={(e) => handleInputChange("rating", e.target.value)}
+              className="border-border focus:border-movie-primary focus:ring-movie-primary/20"
               required
             />
           </div>
@@ -115,8 +117,8 @@ const AddMovie = ({ onAddMovie }) => {
             type="url"
             placeholder="https://example.com/poster.jpg"
             value={formData.posterURL}
-            onChange={(e) => handleInputChange('posterURL', e.target.value)}
-            className="bg-movie-surface-hover border-border focus:border-movie-primary focus:ring-movie-primary/20"
+            onChange={(e) => handleInputChange("posterURL", e.target.value)}
+            className=" border-border focus:border-movie-primary focus:ring-movie-primary/20"
           />
         </div>
 
@@ -127,8 +129,8 @@ const AddMovie = ({ onAddMovie }) => {
           <Textarea
             placeholder="Enter movie description..."
             value={formData.description}
-            onChange={(e) => handleInputChange('description', e.target.value)}
-            className="bg-movie-surface-hover border-border focus:border-movie-primary focus:ring-movie-primary/20 min-h-[100px]"
+            onChange={(e) => handleInputChange("description", e.target.value)}
+            className=" border-border focus:border-movie-primary focus:ring-movie-primary/20 min-h-[100px]"
             required
           />
         </div>
