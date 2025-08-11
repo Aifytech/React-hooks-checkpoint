@@ -17,9 +17,11 @@ const MovieList = ({ movies }) => {
 
   return (
     <div className="w-full px-4 max-w-6xl mx-auto">
-      <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid auto-cols-min grid-flow-row sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {movies.map((movie, index) => (
-          <MovieCard key={index} movie={movie} />
+          <div className="w-[300px]">
+            <MovieCard key={index} movie={movie} />
+          </div>
         ))}
       </div>
     </div>

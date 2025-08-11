@@ -5,46 +5,58 @@ import MovieFilter from "../components/MovieFilter";
 import AddMovie from "../components/AddMovie";
 
 // Sample movie data
-const initialMovies = [
+export const initialMovies = [
   {
+    id: 1,
     title: "The Shawshank Redemption",
     description:
       "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
     posterURL:
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=450&fit=crop",
     rating: 9.3,
+    trailer: "https://www.youtube.com/embed/NmzuHjWmXOc?si=VIt-GVn10TYkWYps"
   },
+
   {
+    id: 2,
     title: "The Godfather",
     description:
       "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
     posterURL:
       "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=300&h=450&fit=crop",
     rating: 9.2,
+    trailer: "https://www.youtube.com/embed/UaVTIH8mujA?si=6XsPQ_VM-tDjgYQr"
   },
   {
+    id: 3,
     title: "The Dark Knight",
     description:
       "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests.",
     posterURL:
       "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=300&h=450&fit=crop",
     rating: 9.0,
+    trailer: "https://www.youtube.com/embed/EXeTwQWrcwY?si=yesIbOetYB8Q3Hxw"
+
   },
   {
+    id: 4,
     title: "Pulp Fiction",
     description:
       "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
     posterURL:
       "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?w=300&h=450&fit=crop",
     rating: 8.9,
+    trailer: "https://www.youtube.com/embed/s7EdQ4FqbhY?si=HVRxxVS06mDeRGZB"
   },
   {
+    id: 5,
     title: "Inception",
     description:
       "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea.",
     posterURL:
       "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=300&h=450&fit=crop",
     rating: 8.8,
+    trailer: "https://www.youtube.com/embed/YoHD9XEInc0?si=D9rFPIWCT4zi4-Ur"
   },
 ];
 
@@ -108,7 +120,7 @@ const Index = () => {
       <footer className="bg-movie-surface border-t border-border mt-16">
         <div className="container mx-auto px-6 py-8">
           <div className="text-center text-muted-foreground">
-            <p>&copy; 2024 MovieFlix. Built with React and Tailwind CSS.</p>
+            <p className="text-xs">&copy; 2024 MovieFlix. Built with React and Tailwind CSS.</p>
           </div>
         </div>
       </footer>
